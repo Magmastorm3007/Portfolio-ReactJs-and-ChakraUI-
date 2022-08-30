@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {FaSun,FaMoon,FaInstagram,} from "react-icons/fa"
+import {Flex,Heading,VStack} from "@chakra-ui/layout"
+import { IconButton, useColorMode } from '@chakra-ui/react';
 
 function App() {
+  const {colormode,togglecolor}=useColorMode();
+  const isdark=colormode=="dark"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ 
+
+   <VStack>
+    <Flex w="100%">
+<Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">imhejo</Heading>
+    </Flex>
+    <IconButton ml={8} icon={isdark?<FaSun/>:<FaMoon/>} isRound='true' onClick={togglecolor} ></IconButton>
+   </VStack>
   );
 }
 
