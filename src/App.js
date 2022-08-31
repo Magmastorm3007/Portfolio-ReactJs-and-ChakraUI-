@@ -6,7 +6,7 @@ import { IconButton, useColorMode } from '@chakra-ui/react';
 
 function App() {
   const {colormode,togglecolor}=useColorMode();
-  const isdark=colormode=="dark"
+  const isdark=colormode==="dark"
   return (
  
 
@@ -14,7 +14,7 @@ function App() {
     <Flex w="100%">
 <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">imhejo</Heading>
     </Flex>
-    <IconButton ml={8} icon={isdark?<FaSun/>:<FaMoon/>} isRound='true' onClick={togglecolor} ></IconButton>
+    <IconButton ml={8} icon={isdark?<FaSun/>:<FaMoon/>} onClick={togglecolor} isRound='true' onClick={togglecolor} ></IconButton>
    </VStack>
   );
 }
